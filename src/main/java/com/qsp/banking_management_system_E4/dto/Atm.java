@@ -1,0 +1,17 @@
+package com.qsp.banking_management_system_E4.dto;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Atm {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int atmId;
+	private String atmName;
+	private String currencyType;
+	private double cashAvailable;
+	private int maxWithdrawalLimit;
+}
